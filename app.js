@@ -24,11 +24,19 @@ const Person = require("./intro"); // imports FirstName & LastName objects from 
 // require("./functions")
 
 //  installing and using external dependancies using npm 
-const _ = require('lodash')
+// const _ = require("lodash")
 
-const items = [1,2,3,4]
-const newItems = _.flattenDeep(items)
-console.log(newItems);
+// let items = [1,2,3,4]
+// let newItems = "banga is awesome" + items ;
+// console.log(newItems);  
 
+const http = require('http')
 
+const server = http.createServer((req, res) => {
+    console.log("request event")
+    res.end('hello world')
+})
 
+    server.listen(5000, () => {
+    console.log("server is listening on port: 5000....");
+})
